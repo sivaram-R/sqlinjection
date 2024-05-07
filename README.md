@@ -68,7 +68,7 @@ UNION-based SQL injection assaults enable the analyzer to extract data from the 
 we will be using the “User Info” page from Mutillidae to perform a Union-Based SQL injection attack. Go to “OWASP Top 10/A1 — Injection/SQLi — Extract-Data/User Info” 
 
 After logging out, Now choose the menu as shown below:
-![img](Screenshot_2023-06-10_13_13_23.png)
+
 ![Screenshot 2023-06-10 224221](https://github.com/praveenst13/sqlinjection/assets/118787793/123993df-2a2b-455f-abde-8904a72314dd)
 
 
