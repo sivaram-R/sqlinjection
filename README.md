@@ -57,7 +57,7 @@ The username field is vulnerable. Put (ganesh’ #) or (ganesh’--) in the user
 
 Now after logging out you will see the login page. In the login page give ganesh’ # . You can see the page now enters into the administrator page as before when giving the password. 
 
-![Screenshot 2023-06-10 223645](https://github.com/praveenst13/sqlinjection/assets/118787793/cb326fd0-509f-4df9-b97d-8a65bf1f0716)
+![8](https://github.com/sivaram-R/sqlinjection/assets/121165794/966545b2-0238-421d-bbd8-54ed12f0fb42)
 
 Click the login button and you will see it enter into the administrator page.
 ![Screenshot 2023-06-10 223656](https://github.com/praveenst13/sqlinjection/assets/118787793/ac33b189-494b-4a5f-bce2-b840ab35e5fc)
