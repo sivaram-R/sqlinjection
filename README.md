@@ -57,8 +57,6 @@ The username field is vulnerable. Put (ganesh’ #) or (ganesh’--) in the user
 
 Now after logging out you will see the login page. In the login page give ganesh’ # . You can see the page now enters into the administrator page as before when giving the password. 
 
-![8](https://github.com/sivaram-R/sqlinjection/assets/121165794/966545b2-0238-421d-bbd8-54ed12f0fb42)
-
 Click the login button and you will see it enter into the administrator page.
 ![Screenshot 2023-06-10 223656](https://github.com/praveenst13/sqlinjection/assets/118787793/ac33b189-494b-4a5f-bce2-b840ab35e5fc)
 
@@ -71,15 +69,9 @@ After logging out, Now choose the menu as shown below:
 
 ![6](https://github.com/sivaram-R/sqlinjection/assets/121165794/b36887ca-04c7-42a1-bba9-5f041078fef7)
 ![7](https://github.com/sivaram-R/sqlinjection/assets/121165794/2bcd642a-9219-4617-ac56-bb0cf9e1dfb5)
-
-![Screenshot 2023-06-10 224452](https://github.com/praveenst13/sqlinjection/assets/118787793/7b70cf08-aa04-4ba1-b7e5-12f048c98c57)
-
-![Screenshot 2023-06-10 224520](https://github.com/praveenst13/sqlinjection/assets/118787793/713a7087-4c4a-49a0-8c23-92af437df4b1)
-
-![Screenshot 2023-06-10 224530](https://github.com/praveenst13/sqlinjection/assets/118787793/a242176f-df4f-4eb2-8296-0671fd7d7264)
+![8](https://github.com/sivaram-R/sqlinjection/assets/121165794/b3a7dd0b-5c0a-4554-96f4-77b392c44e78)
+![9](https://github.com/sivaram-R/sqlinjection/assets/121165794/4b7b76a2-f68c-4966-a548-57c7f0edfff1)
 From this point, all our attack vectors will be performed in the URL section of the page using the Union-Based technique.There are two different ways to discover how many columns are selected by the original query. The first is to infuse an “ORDER BY” statement indicating a column number. Given the column number specified is higher than the number of columns in the “SELECT” statement, an error will be returned.
-![Screenshot 2023-06-10 224702](https://github.com/praveenst13/sqlinjection/assets/118787793/10c8f015-3770-46b5-b320-bf37cc7bbdae)
-
 
 Since we do not know the number of columns, we start at 1. To find the exact amount of columns, the number is incremented until an error related to the “ORDER BY” clause is returned. In this example, we incremented it to 6 and received an error message, so it means that the number of columns is lower than 6.
 
@@ -88,11 +80,11 @@ The browser url of this info page need to be modified with the url as below:
 http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=praveen%27order%20by%206%23&password=&user-info-php-submit-button=View+Account+Details
 
 
-![Screenshot 2023-06-10 224839](https://github.com/praveenst13/sqlinjection/assets/118787793/0eb340b9-63a6-433e-878b-45f3b396f1a2)
+![11](https://github.com/sivaram-R/sqlinjection/assets/121165794/aa1be39c-051d-48ba-8520-8154a4bc5d28)
 
 After adding the order by 6 into the existing url , the following error statement will be obtained:
-![Screenshot 2023-06-10 224839](https://github.com/praveenst13/sqlinjection/assets/118787793/0eb340b9-63a6-433e-878b-45f3b396f1a2)
 
+![10](https://github.com/sivaram-R/sqlinjection/assets/121165794/dcffabe8-94f4-47dd-a206-42aa94b7c4e6)
 
 
 When we ordered by 5, it worked and displayed some information. It means there are five columns that we can work with. Following screenshot shows that the url modified to have statement added with ordered by 5 replacing 6.
@@ -101,9 +93,7 @@ When we ordered by 5, it worked and displayed some information. It means there a
 
  As it is having 5 columns the query worked fine and it provides the correct result
 
-
-![Screenshot 2023-06-10 224939](https://github.com/praveenst13/sqlinjection/assets/118787793/7a660480-5cb6-4d86-acd1-08f7a4d5e2fa)
-
+![13](https://github.com/sivaram-R/sqlinjection/assets/121165794/0f09907c-7348-4fb1-b0cc-49ed02d0682e)
 
 Instead of using the "order by" option, let’s use the "union select" option and provide all five columns. Ex: (union select 1,2,3,4,5)
 
