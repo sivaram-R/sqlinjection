@@ -37,10 +37,11 @@ Click on the menu Login/Register and register for an account
 ![Screenshot 2023-06-10 214003](https://github.com/praveenst13/sqlinjection/assets/118787793/dfe4513c-3c0d-43e0-b1e4-ad4baee43b98)
 
 Click on the link “Please register here”
-![Screenshot 2023-06-10 214117](https://github.com/praveenst13/sqlinjection/assets/118787793/abd46fae-74a4-48e7-9f95-8eb1470cfe3c)
+![3](https://github.com/sivaram-R/sqlinjection/assets/121165794/202e1d37-5c76-4ebd-a7e2-47d71027f4cf)
 
 Click on “Create Account” to display the following page:
-![Screenshot 2023-06-10 214903](https://github.com/praveenst13/sqlinjection/assets/118787793/499aca4d-391b-4f0e-ac33-31ace3337955)
+![4](https://github.com/sivaram-R/sqlinjection/assets/121165794/c6742298-8692-4331-a13c-30cf9096773f)
+
 The login structure we will use in our examples is straightforward. It contains two input fields (username and password), which are both vulnerable. The back-end content creates a query to approve the username and secret key given by the client. Here is an outline of the page rationale:
 
 ($query = “SELECT * FROM users WHERE username=’$_POST[username]’ AND password=’$_POST[password]’“;).
