@@ -47,12 +47,8 @@ The login structure we will use in our examples is straightforward. It contains 
 ($query = “SELECT * FROM users WHERE username=’$_POST[username]’ AND password=’$_POST[password]’“;).
  For the username put “ganesh” or “anything” and for the password put (anything’ or ‘1’=’1) or (admin’ or ‘1’=’1) then try to log in, and you’ll be presented with an admin login page.
 
-
-![Screenshot 2023-06-10 223438](https://github.com/praveenst13/sqlinjection/assets/118787793/8ae683e6-f569-42f3-9c38-82bc3f9e6f41)
-
 Click “Login”. The logged in page will show as below:
-![Screenshot 2023-06-10 223535](https://github.com/praveenst13/sqlinjection/assets/118787793/037084b7-47fb-40ac-85cc-43f91dde84b5)
-
+![5](https://github.com/sivaram-R/sqlinjection/assets/121165794/be2c0658-7950-454d-b4ff-e4005e7f9498)
 
 
 ##Bypassing login field
